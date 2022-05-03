@@ -4,62 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Vanilla Javascript Projects/calculator/style.css">
+    <link rel="stylesheet" href="/style.css">
     <title>Calculator</title>
-    <style>* {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        background-color: #ecf0f3;
-        font-family: sans-serif;
-        outline: none;
-      }
-      .container {
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .calculator {
-        padding: 15px;
-        border-radius: 30px;
-        background: #ecf0f3;
-        display: grid;
-        grid-template-columns: repeat(4, 70px);
-        box-shadow: inset 5px 5px 12px #fff, 5px 5px 12px rgba(0, 0, 0, 0.16);
-        width: max-content;
-        gap: 12px;
-      }
-      .input {
-        grid-column: span 4;
-        height: 6.2rem;
-        width: 100%;
-        background: #ecf0f3;
-        box-shadow: inset -5px -5px 12px #fff, inset 5px 5px 12px rgba(0, 0, 0, 0.16);
-        caret-color: pink;
-      
-        border: none;
-        border-radius: 12px;
-        color: rgb(70, 70, 70);
-      
-        font-size: 4rem;
-        margin-bottom: 2.5rem;
-        padding: 1.3rem;
-      }
-      button {
-        background: #ecf0f3;
-        height: 4.5rem;
-        width: 4.5rem;
-        border: none;
-        border-radius: 50%;
-        box-shadow: inset -5px -5px 12px #fff, inset 5px 5px 12px rgba(0, 0, 0, 0.16);
-        font-size: larger;
-        cursor: pointer;
-      }
-      .calculator:last-child {
-        grid-column: span 4;
-      }
-      </style>
+ 
 </head>
 <body>
     <div class="container">
@@ -86,34 +33,7 @@
             <button onclick="Calculate()" class="equals-btn">=</button>
         </div>
     </div>
-    <script src="/Vanilla Javascript Projects/calculator/app.js"></script>
-    <script>let output = document.getElementById('calc-screen');
-
-        function display( num){
-          
-          output.value+=num;
-        }
-        
-        function Calculate(){
-        
-            if(output.value.length==0){
-                return "";
-            }
-            try{
-                output.value = eval(output.value);
-            }
-            catch(err){
-                alert("Invalid opeartion");
-            }
-        }
-        
-        function Clear(){
-            console.log('clear the screen')
-            output.value= "";
-        }
-        function del (){
-            console.log('deleted')
-            output.value = output.value.slice(0,-1)
-        }</script>
+    <script src="/app.js"></script>
+    
 </body>
 </html>
